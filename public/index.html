@@ -8,6 +8,23 @@
 	<title>Document</title>
 </head>
 <body>
+ssss
 
+<script src="/socket.io/socket.io.js"></script>
+<script>
+	//그냥 io로 할경우 localhost로
+	var socket = io();
+
+	//소켓접속
+	socket.on('connect', ()=>{
+		console.log('Connected to server');
+	});
+
+	//disconnected
+	socket.on('disconnect', ()=>{
+		console.log('unable to connect');
+
+	})
+</script>
 </body>
 </html>
